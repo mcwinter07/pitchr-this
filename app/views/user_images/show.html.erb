@@ -1,14 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>User:</strong>
-  <%= @user_image.user %>
-</p>
-
-<p>
-  <strong>Image data:</strong>
-  <%= @user_image.image_data %>
-</p>
+<div> 
+<%= image_tag @user_image.image_data %> 
+</div>
 
 <p>
   <strong>Description:</strong>
