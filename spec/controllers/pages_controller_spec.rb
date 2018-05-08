@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe StaticController, type: :controller do
+RSpec.describe PagesController, type: :controller do
 
   describe "GET #about" do
     it "returns http success" do
