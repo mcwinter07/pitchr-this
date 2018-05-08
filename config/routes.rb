@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
-#dynamic home
+  resources :user_images
+
+  #dynamic home
 
   root to: 'home#index'
   get 'home/index'
