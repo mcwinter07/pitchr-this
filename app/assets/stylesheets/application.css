@@ -29,15 +29,11 @@ body {
 
 /* nav */
 ul {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    width: 100vw;
     margin: 0;
     padding: 20px 0;
     background: #323232;
     display: flex;
-    border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0,0,0,.3);   
 }
 
@@ -67,7 +63,7 @@ ul li a {
     display: none;
 }
 
-@media (max-width: 934px)
+@media (max-width: 970px)
 {
     /* need js */
     /* .menuToggle 
@@ -77,7 +73,7 @@ ul li a {
     ul 
     {
         padding: 0;
-        width: 90%;
+        width: 100vw;
         display: block;
         overflow: hidden;
         transition: 0.5s;
