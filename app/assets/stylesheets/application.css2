@@ -1,0 +1,71 @@
+<div class="navbar">
+        <%= link_to image_tag('pitchr_text_alt.png'), class: 'nav-logo'%>
+
+        <span class="nav-middle">
+        <%= link_to "Home", root_path %>
+        <%= link_to "About", pages_about_path %>
+        <%= link_to "Projects", root_path %>
+        </span>
+
+        <span class="nav-right">
+        <% if user_signed_in? %>
+        Welcome <strong><%= current_user.email %></strong>
+        <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+        <% else %>
+        <%= link_to "Sign up", new_user_registration_path  %>
+        <%= link_to "Login", new_user_session_path  %>
+        
+        <% end %>
+        </span>
+</div>
+
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ * {
+    box-sizing: border-box;
+ }
+
+
+.navbar {
+    border-bottom: 1px solid rgb(60, 60, 230);
+    text-align: right;
+    height: 70px;
+    line-height: 70px;  
+ display:grid;
+ grid-template-areas:
+ "navlogo navmiddle navright";
+ max-width: 100vw;
+ grid-template-columns: repeat(3, 1fr);
+ grid-gap: 1em;
+ background-color: #333333;
+ align-items: flex-end;
+ text-align: center
+}
+
+.navright {
+    display: grid;
+    
+    grid-area: nav-right;
+}
+
+.navmiddle {
+    display: grid;
+
+    grid-area: nav-middle;
+}
+
