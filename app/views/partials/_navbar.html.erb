@@ -1,65 +1,64 @@
 <div class="nav">
-            <div class="logo">
-            </div>
-            <div class="menu">
-                <%#<div class="menuToggle">Menu</div>%>
-                <ul>
-                
-                <li>
-                    <div class="logo">
-                        <%= link_to image_tag('pitchr_text_alt.png'), root_path %>
-                    </div>
-                </li>
-                
-                <li>
-                        <div class="name">
-                            <%= link_to "Home", root_path %>
-                        </div>
-                </li>
 
-                <li>
-                        <div class="name">
-                            <%= link_to "About", pages_about_path %>
-                        </div>
-                </li>
+    <label for="toggle">&#9776;</label>
+    <input types="checkbox" id="toggle"/>
 
-                <li>
-                        <div class="name">
-                            <%= link_to "Projects", root_path %>
-                        </div>
-                </li>
-                
-
-                <% if user_signed_in? %>
-
-                <li>
-                        <div class="name">
-                            <%= link_to "Profile", root_path %>
-                        </div>
-                </li>
-
-                <li>
-                        <div class="name">
-                            <%= link_to "Logout", destroy_user_session_path, method: :delete  %>
-                        </div>
-                </li>
-
-                <% else %>
-
-                <li>
-                        <div class="name">
-                            <%= link_to "Login", new_user_session_path %>
-                        </div>
-                </li>
-
-                <li>
-                    <div class="name">
-                        <span><%= link_to "Signup", new_user_registration_path  %></span>
-                    </div> 
-                </li>
-
-                <% end %>
-                
-            </ul>
+    <ul class="menu">
+        
+        
+        <div class="logo">
+            <%= link_to image_tag('pitchr_text_alt.png'), root_path %>
         </div>
+        
+        
+        <li>
+            <div class="name">
+                <%= link_to "Home", root_path %>
+            </div>
+        </li>
+
+        <li>
+            <div class="name">
+                <%= link_to "About", pages_about_path %>
+            </div>
+        </li>
+
+        <li>
+            <div class="name">
+                <%= link_to "Projects", root_path %>
+            </div>
+        </li>
+        
+
+        <% if user_signed_in? %>
+
+        <li>
+            <div class="name">
+                <%= link_to "Profile", root_path %>
+            </div>
+        </li>
+
+        <li>
+            <div class="name">
+                <%= link_to "Logout", destroy_user_session_path, method: :delete  %>
+            </div>
+        </li>
+
+        <% else %>
+
+        <li>
+            <div class="name">
+                <%= link_to "Login", new_user_session_path %>
+            </div>
+        </li>
+
+        <li>
+            <div class="name">
+                <span><%= link_to "Signup", new_user_registration_path  %></span>
+            </div> 
+        </li>
+
+        <% end %>
+        
+    </ul>
 </div>

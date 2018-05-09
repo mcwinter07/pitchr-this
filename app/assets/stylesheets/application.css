@@ -28,19 +28,29 @@ body {
 }
 
 /* nav */
+#toggle {
+    display: none;
+}
+
 ul {
     width: 100vw;
     margin: 0;
-    padding: 20px 0;
+    padding: 20px 20px ;
     background: #323232;
     display: flex;
-    box-shadow: 0 10px 30px rgba(0,0,0,.3);   
+    box-shadow: 0 10px 30px rgba(0,0,0,.2);   
 }
 
 ul li {
+    width: 100vw;
+    margin: 0;
+    padding: 30px 0;
     list-style: none;
     display: block; 
+   
+    text-align: right;
     align-self: baseline
+    
 }
 
 ul li a {
@@ -51,26 +61,45 @@ ul li a {
     font-size: 18px;
     line-height: 20px;
 }
-.menuToggle {
-    position: fixed;
-    top: 30px;
-    right: 30px;
-    padding: 10px;
-    font-weight: bold;
-    background: #58009a;
-    border-radius: 4px;
-    cursor: pointer;
-    display: none;
+
+ul li a {
+    align-self: flex-end;
+    align-items: flex-end;
+    align-content: flex-end
 }
 
-@media (max-width: 970px)
+
+@media only screen and (max-width: 910px)
+
 {
     /* need js */
     /* .menuToggle 
     {
         display: block;
     } */
-    ul 
+
+    label 
+    {
+        display: block;
+        cursor: pointer
+    }
+    ul {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
+    ul a
+    {
+        display: block;
+        border-bottom: 1 solid #EAEAEB; 
+        margin: 0;
+    }
+    #toggle:checked + .menu {
+        display: block;
+    }
+}
+    /* ul 
     {
         padding: 0;
         width: 100vw;
@@ -107,4 +136,4 @@ ul li a {
         padding: 10px;
     }
 
-}
+} */
