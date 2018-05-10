@@ -7,12 +7,16 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Da|Lato|Open+Sans" rel="stylesheet"> 
   </head>
 
   <body>
+  
     <div class="nav">
           <%= render 'partials/navbar' %>
     </div>
+
     <%= yield %>
+    
   </body>
 </html>

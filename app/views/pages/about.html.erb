@@ -1,5 +1,34 @@
 
-<body>
-<h1>Pages#about</h1>
-<p>Find me in app/views/pages/about.html.erb</p>
-</body>
+<main>
+    <body class="pages-body">
+    
+        <div class="about-section-1">
+            <h1> About </h1>
+
+            <p>Pitchr is a web app made for creatives in the fashion, photography and design industry looking for a secure and simple solution for working online.</p>
+        </div>
+
+        <div class="about-section-2">
+            <h1> Creative freedom </h1>
+
+            <p>Designed with creatives in mind, Pitchr offers digital designers, photographers, models and makeup artist an intuitive platform to pitch, create and collaborate on exciting projects online.</p>
+        </div>
+
+        <div class="about-section-3">
+            <h1> Work your own way </h1>
+
+            <p>Once you’ve create your profile and set your base rate you’ll have access to our projects board. Work locally or remotely on jobs created by businesses and members of the Pitchr community.</p>
+        </div>
+
+        <div class="about-section-4">
+            <h1>Get started</h1>
+            <p>Take back creative control and discover exciting new projects with Pitchr</p>
+         
+            <button class="cta"><%= link_to "Login", new_user_session_path %></button>
+
+            <button class="cta"><%= link_to "Signup", new_user_registration_path %></button>
+
+
+    <%= yield %>
+
+</main>

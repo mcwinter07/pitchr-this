@@ -31,15 +31,24 @@ body {
     ". main ."
     "footer footer footer";
     grid-template-columns: 1fr 18fr 1fr;
-    
+    font-family : ‘Open+Sans', sans-serif;
 }
+
+h1 {
+    font-family : ‘Lato', sans-serif;
+}
+
 main {
     grid-area: main;
     background-color: #323232;
-    border-bottom: .2em solid tomato;
     padding: 4em 0 2em 0;
     z-index: -5;
 }
+footer {
+    border-top: .2em solid rgba(0,0,0,.1);
+}
+
+
 
 /* nav */
 .nav {
@@ -111,7 +120,7 @@ main {
         text-align: center;
         min-width: 9.6em;
         min-height: 9.6em;
-        padding-top: 3.5em;
+        padding-top: 1em;
     }  
         /* burger icon */
     .burger-style {

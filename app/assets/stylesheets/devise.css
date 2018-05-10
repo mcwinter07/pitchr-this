@@ -60,11 +60,6 @@ main {
 
 }
 
-
-.field_with_errors {
-    background-color: dodgerblue;
-    
-  }
 .simple_form .error {
     clear: left;
     color: #f5f7ff;
@@ -81,17 +76,16 @@ main {
     display: flex;
     font-style: italic;
     justify-content: flex-start;
-    background-color: ;
+    
   }
 
 div.boolean label {
-    color: aqua;
+    
 }
 input.check_boxes {
-    background-color: turquoise;
-    color: turquoise;
+    
+    
 }
 input.radio {
-    background-color: turquoise;
-    color: turquoise;
+    
 }
