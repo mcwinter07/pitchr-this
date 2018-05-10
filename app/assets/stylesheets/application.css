@@ -19,6 +19,8 @@
  }
 
 body {
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
     font-family: sans-serif;
@@ -58,8 +60,10 @@ main {
 
 .logo a {
     display: flex;
-    margin: 20px 0 20px 10px;
-    padding: 10px 20px 10px;
+    flex-direction: row;
+    width: 100%;
+    margin: 20px 0 20px 0;
+    padding: 10px 0 20px 0;
 }
 .nav .menu {
     width: 80%;
@@ -77,60 +81,54 @@ main {
     line-height: 20px;   
 }
     /* burger_button */
-    .nav .burger-shower {
-        display: none;  
-    }
-    .nav .burger-menu {
-        display: none;    
+    .nav .collapsable-menu {
+        display: none;
     }
     
-
 
 @media (max-width: 910px)
 
 {
     .nav .menu {
         display: none;
-    }
-    
-    .nav {
-        display: flex;
-        justify-content: space-evenly;
-        width: 100%;
-    }
+    }    
 
-      /* burger_button */
-    .burger-shower:checked ~ .burger-menu {
-        display: block;
-      }
-      
-    .hamburger {
+    .burger-menu {
         display: flex;
-        justify-content: flex-end;
-        grid-area: nav;
-        grid-row: 2/3;
+        background-color: tomato;
+        max-width: 10em;
+        max-height: 10em;
+        flex-wrap: wrap;
+        align-content: center;
+        text-align: center;
+        min-width: 10em;
+        min-height: 10em;
+    }  
+        /* burger icon */
+        .burger-style {
+        display: flex;
         color: #f5f7ff;
         font-size: 5em;
-        padding-top: 50px;
-        width: 5em;
-
-      }
-
-    .burger-menu {
-         display:none;
-         
-    }
-
-    .burger-menu {
-        padding: 20px 0 20px 0;
-        justify-content: flex-end;
-        
-    }
-    .burger-menu li {
-        list-style: none;
-        padding: 20px 0 20px 0;
-    }
-    .burger-menu li a{
+        z-index: 100;
+        }
+        /* burger icon */
+    
+    .burger-ul li {
         display: flex;
-        flex-direction: row-reverse;
+        align-self: flex-end;
+        flex-direction: column;
+        background-color: tomato;
+        list-style: none;
     }
+
+
+
+    /* reveal action */
+    .bugermenu input[type=checkbox]:checked ~ .burger-ul li {
+        display: flex
+    }
+    /* reveal action */
+
+ 
+
+}

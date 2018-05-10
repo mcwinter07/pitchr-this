@@ -8,7 +8,7 @@
             <%= link_to image_tag('pitchr_text_alt.png'), root_path %>
         </i>
 
-    <ul class="menu" id="app-nav-menu">
+        <ul class="menu" id="app-nav-menu">
         
             <li>
                     <%= link_to "Home", root_path %>
@@ -23,7 +23,6 @@
                     <%= link_to "Projects", root_path %>
             </li>
             
-
             <% if user_signed_in? %>
 
             <li>
@@ -47,63 +46,55 @@
             </li>
 
             <% end %>
-   
         
-    </ul>
+         </ul>
     
-    <div class="collapsable-menu">
-    
-        <input type="checkbox" id="burger-shower" class="burger-shower">
-        <label for="burger-shower" class="hamburger">
-        &#9776;
-        </label>
-        
-        
-        <ul class="burger-menu">
-            <label for="burger-shower">
-                <li>
-                        <%= link_to "Home", root_path %>
-                </li>
+        <div class="burger-menu">
 
-                <li>
-                        <%= link_to "About", pages_about_path %>
-                    
-                </li>
-
-                <li>
-                        <%= link_to "Projects", root_path %>
-                </li>
+                <input type="checkbox" id="burger-toggle" class="burger-toggle">
                 
+                <label for="burger-toggle" class="burger-style">
+                &#9776;
+                </label>
+                
+                <ul class="burger-ul">
+                        <li>
+                                <%= link_to "Home", root_path %>
+                        </li>
 
-                <% if user_signed_in? %>
+                        <li>
+                                <%= link_to "About", pages_about_path %>
+                        
+                        </li>
 
-                <li>
-                        <%= link_to "Profile", root_path %>
-                </li>
+                        <li>
+                                <%= link_to "Projects", root_path %>
+                        </li>
+                        
 
-                <li>
-                        <%= link_to "Logout", destroy_user_session_path, method: :delete  %>
-                </li>
+                                <% if user_signed_in? %>
 
-                <% else %>
+                        <li>
+                                <%= link_to "Profile", root_path %>
+                        </li>
 
-                <li>
-                        <%= link_to "Login", new_user_session_path %>
-                </li>
+                        <li>
+                                <%= link_to "Logout", destroy_user_session_path, method: :delete  %>
+                        </li>
+                                <% else %>
+                        <li>
+                                <%= link_to "Login", new_user_session_path %>
+                        </li>
 
-                <li>
-                    
-                        <%= link_to "Signup", new_user_registration_path  %>
-                    
-                </li>
-
-                <% end %>
-
-            </label>
-        </ul>
-
-
+                        <li>
+                        
+                                <%= link_to "Signup", new_user_registration_path  %>
+                        
+                        </li>
+                                <% end %>
+                </ul>
+                
+        </div>
         
-    </div>
 </div>
 
