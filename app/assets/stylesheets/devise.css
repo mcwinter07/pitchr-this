@@ -16,23 +16,38 @@ main {
 .devise-container i a {
 
     display: flex;
+    justify-content: center;
     align-self: center;
     width: 20vw;
-    max-width: 20em;
-    min-width: 10em;
 }
 
 .devise-container input, label {
-    width: 20vw;
+    display:flex;
+    justify-content: center;
+    /* width: 50vw;
     max-width: 50em;
-    min-width: 10em;
+    min-width: 10em; */
 }
 
 /* form styling */
 .simple_form label {
     color: #f5f7ff;
+    padding-bottom: .5em;
+}
+.simple_form label {
+    color: #f5f7ff;
+    padding-bottom: .5em;
+}
+
+.simple_form input {
+    display:flex;
+    justify-content: center;
+    color: #323232;
+    border-radius: .5em;
+    background-color: #f5f7ff;
     
 }
+
 .simple_form input[type='submit'] {
     border-style: none;
     border-color: #7836B2;
@@ -41,14 +56,33 @@ main {
     border-radius: .5em;
     align-self: center;
     align-content: center;
+    padding-bottom: 1em;
 
 }
-.simple_form input {
-    color: #323232;
-    border-radius: .5em;
-    background-color: #f5f7ff;
+
+
+.field_with_errors {
+    background-color: dodgerblue;
     
+  }
+.simple_form .error {
+    clear: left;
+    color: #f5f7ff;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 120px;
+             
 }
+
+.simple_form .hint {
+    clear: left;
+    margin-left: 120px;
+    color: #f5f7ff;
+    display: flex;
+    font-style: italic;
+    justify-content: flex-start;
+    background-color: ;
+  }
 
 div.boolean label {
     color: aqua;
