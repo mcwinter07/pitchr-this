@@ -7,6 +7,12 @@ Rails.application.routes.draw do
   root to: 'home#index'
   get 'home/index'
 
+  get 'profile/index', to: 'profile#index'
+
+  get 'project/index', to: 'project#index'
+
+
+
 
   # static pages 
     get 'pages/about', to: 'pages#about'
